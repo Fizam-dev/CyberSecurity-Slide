@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Web Application Security</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Grid Pattern Background using SVG to avoid gradients */
+        .bg-grid-pattern {
+            background-color: #050505;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23636d55' fill-opacity='0.1'%3E%3Crect x='0' y='0' width='1' height='1'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 30px 30px;
+        }
+
+        .content-card {
+            background-color: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .icon-box {
+            box-shadow: 0 0 15px rgba(99, 109, 85, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-grid-pattern">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Top Right Circuit -->
+<path d="M 1180 0 L 1180 80 L 1280 80" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="1180" cy="80" fill="#636d55" r="4"></circle>
+<!-- Bottom Left Circuit -->
+<path d="M 50 720 L 50 650 L 150 650" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="150" cy="650" fill="#636d55" r="4"></circle>
+</svg>
+</div>
+<!-- Header -->
+<div class="px-12 pt-10 pb-4 flex justify-between items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+<div>
+<p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Application Layer Defense</p>
+<h2 class="text-4xl font-header font-bold text-white uppercase tracking-tight">
+                    Web Application <span class="text-accent">Security</span>
+</h2>
+</div>
+<div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+<i class="fas fa-globe"></i>
+<span>APPSEC &amp; OWASP</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 py-8 flex gap-12 relative z-10 items-center">
+<!-- Left Column: Standards & Prevention -->
+<div class="w-1/2 flex flex-col gap-6">
+<div class="mb-2">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-accent block"></span>
+                        Standar &amp; Pencegahan
+                    </h3>
+<p class="text-gray-400 text-sm">Framework dan praktik terbaik untuk mencegah kerentanan aplikasi.</p>
+</div>
+<!-- Item 1 -->
+<div class="content-card p-5 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-12 h-12 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-list-ol text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">OWASP Top 10</h4>
+<p class="text-sm text-gray-400 leading-relaxed">Mitigasi risiko kritis seperti SQL Injection, Broken Access Control, dan Cross-Site Scripting (XSS) yang paling sering dieksploitasi.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="content-card p-5 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-12 h-12 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-code-branch text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">Secure SDLC (DevSecOps)</h4>
+<p class="text-sm text-gray-400 leading-relaxed">Mengintegrasikan keamanan sejak fase desain hingga deployment (Shift Left), bukan hanya di akhir pengembangan.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="content-card p-5 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-12 h-12 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-shield-virus text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">WAF &amp; RASP</h4>
+<p class="text-sm text-gray-400 leading-relaxed">Implementasi Web Application Firewall untuk memblokir serangan lapisan aplikasi secara real-time.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Testing & Protection -->
+<div class="w-1/2 flex flex-col gap-6">
+<div class="mb-2">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-gray-700 block"></span>
+                        Pengujian &amp; Proteksi Data
+                    </h3>
+<p class="text-gray-400 text-sm">Metode validasi keamanan dan perlindungan informasi sensitif.</p>
+</div>
+<!-- Testing Methods Box -->
+<div class="content-card p-6 rounded-xl border border-gray-800 relative">
+<div class="flex items-start gap-4 mb-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-bug text-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono">Metode Pengujian</h4>
+<p class="text-xs text-gray-500 mt-1">Validasi berkelanjutan</p>
+</div>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<i class="fas fa-check text-accent mt-1 text-xs"></i>
+<p class="text-sm text-gray-300"><strong>Penetration Testing:</strong> Simulasi serangan etis terotorisasi.</p>
+</li>
+<li class="flex items-start gap-3">
+<i class="fas fa-check text-accent mt-1 text-xs"></i>
+<p class="text-sm text-gray-300"><strong>Bug Bounty:</strong> Program insentif untuk peneliti keamanan.</p>
+</li>
+<li class="flex items-start gap-3">
+<i class="fas fa-check text-accent mt-1 text-xs"></i>
+<p class="text-sm text-gray-300"><strong>SAST/DAST:</strong> Analisis kode statis dan dinamis otomatis.</p>
+</li>
+</ul>
+</div>
+<!-- Data Protection Box -->
+<div class="content-card p-6 rounded-xl border-l-4 border-accent relative overflow-hidden bg-gray-900 bg-opacity-40">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<i class="fas fa-lock text-6xl text-white"></i>
+</div>
+<h4 class="text-lg font-bold text-white mb-3 font-mono">Prinsip Proteksi Data</h4>
+<div class="space-y-3">
+<p class="text-sm text-gray-300 flex items-center gap-2">
+<i class="fas fa-shield-alt text-accent text-xs"></i>
+<span><strong>Input Validation:</strong> Never trust user input.</span>
+</p>
+<p class="text-sm text-gray-300 flex items-center gap-2">
+<i class="fas fa-key text-accent text-xs"></i>
+<span><strong>Encryption:</strong> TLS untuk data transit &amp; enkripsi database.</span>
+</p>
+<p class="text-sm text-gray-300 flex items-center gap-2">
+<i class="fas fa-user-lock text-accent text-xs"></i>
+<span><strong>Session Mgmt:</strong> Token aman, timeout, dan HTTPOnly cookies.</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 03: APPLICATION SECURITY</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
