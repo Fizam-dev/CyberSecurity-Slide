@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Definisi Cybersecurity</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Subtle Grid Background */
+        .bg-tech-grid {
+            background-image: linear-gradient(#111 1px, transparent 1px), linear-gradient(90deg, #111 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-tech-grid">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 p-8 opacity-20">
+<i class="fas fa-shield-halved text-9xl text-gray-800"></i>
+</div>
+<!-- Header Section -->
+<div class="px-12 pt-12 pb-6 border-b border-gray-800 flex justify-between items-end relative z-10">
+<div>
+<p class="text-accent font-mono text-sm tracking-widest mb-2 uppercase">Pengenalan Dasar</p>
+<h1 class="text-5xl font-header font-bold text-white uppercase tracking-tight">
+                    Apa itu <span class="text-accent">Cybersecurity</span>?
+                </h1>
+</div>
+<div class="text-right hidden md:block">
+<i class="fas fa-lock text-3xl text-gray-600"></i>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 py-8 flex gap-12 relative z-10">
+<!-- Left Column: Definition -->
+<div class="w-7/12 flex flex-col justify-center">
+<div class="border-l-4 border-accent pl-8 py-4 mb-8 bg-gray-900 bg-opacity-30 rounded-r-lg">
+<p class="text-3xl font-light leading-snug text-gray-100 mb-4">
+                        "Praktik melindungi sistem, jaringan, dan program dari <span class="text-accent font-bold">serangan digital</span>."
+                    </p>
+<p class="text-gray-400 text-lg">
+                        Tujuannya adalah untuk mengakses, mengubah, atau menghancurkan informasi sensitif, memeras uang dari pengguna, atau mengganggu proses bisnis normal.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="bg-gray-900 p-4 rounded border border-gray-800 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent">
+<i class="fas fa-shield-virus"></i>
+</div>
+<p class="font-mono text-sm text-gray-300">Pencegahan Serangan</p>
+</div>
+<div class="bg-gray-900 p-4 rounded border border-gray-800 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent">
+<i class="fas fa-eye"></i>
+</div>
+<p class="font-mono text-sm text-gray-300">Deteksi Ancaman</p>
+</div>
+<div class="bg-gray-900 p-4 rounded border border-gray-800 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent">
+<i class="fas fa-fire-extinguisher"></i>
+</div>
+<p class="font-mono text-sm text-gray-300">Respons Insiden</p>
+</div>
+<div class="bg-gray-900 p-4 rounded border border-gray-800 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-accent">
+<i class="fas fa-rotate"></i>
+</div>
+<p class="font-mono text-sm text-gray-300">Pemulihan Sistem</p>
+</div>
+</div>
+</div>
+<!-- Right Column: CIA Triad -->
+<div class="w-5/12 flex flex-col justify-center">
+<div class="bg-gray-900 bg-opacity-80 p-8 rounded-xl border border-gray-700 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-20 h-20 bg-accent opacity-10 rounded-bl-full"></div>
+<h3 class="text-2xl font-header font-bold text-white mb-6 flex items-center gap-3">
+<span class="text-accent">CIA</span> Triad
+                    </h3>
+<div class="space-y-6">
+<!-- Confidentiality -->
+<div class="flex items-start gap-4">
+<div class="mt-1 w-10 h-10 rounded bg-black border border-accent flex-shrink-0 flex items-center justify-center text-accent shadow-[0_0_10px_rgba(99,109,85,0.3)]">
+<i class="fas fa-user-secret"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Confidentiality (Kerahasiaan)</h4>
+<p class="text-sm text-gray-400">Memastikan data hanya diakses oleh pihak yang berwenang.</p>
+</div>
+</div>
+<!-- Integrity -->
+<div class="flex items-start gap-4">
+<div class="mt-1 w-10 h-10 rounded bg-black border border-gray-700 flex-shrink-0 flex items-center justify-center text-gray-300">
+<i class="fas fa-file-signature"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Integrity (Integritas)</h4>
+<p class="text-sm text-gray-400">Menjamin data akurat, lengkap, dan tidak dimodifikasi tanpa izin.</p>
+</div>
+</div>
+<!-- Availability -->
+<div class="flex items-start gap-4">
+<div class="mt-1 w-10 h-10 rounded bg-black border border-gray-700 flex-shrink-0 flex items-center justify-center text-gray-300">
+<i class="fas fa-server"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Availability (Ketersediaan)</h4>
+<p class="text-sm text-gray-400">Sistem dan data tersedia saat dibutuhkan oleh pengguna sah.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 01: DEFINITION</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
