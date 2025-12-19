@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Social Engineering</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Simple Grid Pattern using SVG to avoid CSS gradients */
+        .bg-grid-pattern {
+            background-color: #050505;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 50 0 L 0 0 0 50' fill='none' stroke='rgba(99, 109, 85, 0.1)' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .content-card {
+            background-color: rgba(17, 24, 39, 0.6);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+        }
+        
+        .icon-box {
+            box-shadow: 0 0 15px rgba(99, 109, 85, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-grid-pattern">
+<!-- Decorative Circuit Lines (SVG) -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M 50 0 L 50 100 L 150 100 L 150 200" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="150" cy="200" fill="#636d55" r="4"></circle>
+<path d="M 1230 720 L 1230 620 L 1130 620" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="1130" cy="620" fill="#636d55" r="4"></circle>
+<!-- Additional tech lines for Social Eng theme -->
+<path d="M 640 100 L 640 50" fill="none" stroke="#636d55" stroke-dasharray="5,5" stroke-width="1"></path>
+</svg>
+</div>
+<!-- Header -->
+<div class="px-12 pt-10 pb-4 flex justify-between items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+<div>
+<p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Human Hacking</p>
+<h2 class="text-4xl font-header font-bold text-white uppercase tracking-tight">
+                Social <span class="text-accent">Engineering</span>
+</h2>
+</div>
+<div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+<i class="fas fa-user-secret"></i>
+<span>PSYCHOLOGICAL MANIPULATION</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 py-8 flex gap-12 relative z-10 items-center">
+<!-- Left Column: Techniques -->
+<div class="w-1/2 flex flex-col gap-5">
+<div class="mb-1">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-accent block"></span>
+                    Teknik &amp; Metode
+                </h3>
+<p class="text-gray-400 text-sm">Memanipulasi korban untuk mengungkapkan informasi rahasia.</p>
+</div>
+<!-- Item 1 -->
+<div class="content-card p-4 rounded-lg flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-envelope-open-text text-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">Phishing &amp; Spear Phishing</h4>
+<p class="text-sm text-gray-400 leading-snug">Email atau pesan palsu yang menyamar sebagai entitas tepercaya (Bank, IT Support) untuk mencuri kredensial.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="content-card p-4 rounded-lg flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-phone-alt text-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">Vishing &amp; Smishing</h4>
+<p class="text-sm text-gray-400 leading-snug">Serangan menggunakan suara (Voice) atau SMS untuk menipu korban agar melakukan transfer atau verifikasi palsu.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="content-card p-4 rounded-lg flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-theater-masks text-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-200 font-mono mb-1">Pretexting &amp; Baiting</h4>
+<p class="text-sm text-gray-400 leading-snug">Menciptakan skenario palsu (Pretexting) atau meninggalkan media fisik yang terinfeksi (Baiting) untuk menjebak korban.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Human Factors & Mitigation -->
+<div class="w-1/2 flex flex-col gap-6">
+<div class="mb-1">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-gray-700 block"></span>
+                    Faktor Manusia &amp; Mitigasi
+                </h3>
+<p class="text-gray-400 text-sm">Memahami celah psikologis dan cara menutupnya.</p>
+</div>
+<!-- Human Factors Box -->
+<div class="bg-gray-900 bg-opacity-40 p-5 rounded-xl border border-dashed border-gray-700 relative">
+<div class="absolute -top-3 left-6 bg-black px-2 text-accent font-mono text-xs font-bold uppercase border border-accent rounded">Psikologi Korban</div>
+<div class="grid grid-cols-2 gap-4 mt-2">
+<div class="flex items-center gap-2">
+<i class="fas fa-exclamation-triangle text-yellow-600"></i>
+<p class="text-gray-300 text-sm font-bold">Urgensi Palsu</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-user-tie text-blue-500"></i>
+<p class="text-gray-300 text-sm font-bold">Otoritas</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-heart text-red-500"></i>
+<p class="text-gray-300 text-sm font-bold">Empati/Iba</p>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-gift text-purple-500"></i>
+<p class="text-gray-300 text-sm font-bold">Keserakahan</p>
+</div>
+</div>
+</div>
+<!-- Mitigation Box -->
+<div class="content-card p-6 rounded-xl border-l-4 border-accent relative overflow-hidden flex-1 flex flex-col justify-center">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<i class="fas fa-user-shield text-6xl text-white"></i>
+</div>
+<h4 class="text-lg font-bold text-white mb-4 font-mono">Strategi Pertahanan</h4>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-accent bg-opacity-20 flex items-center justify-center flex-shrink-0 text-accent font-bold text-xs">01</div>
+<div>
+<p class="text-white font-bold text-sm">Security Awareness Training</p>
+<p class="text-gray-500 text-xs">Simulasi phishing berkala untuk melatih kewaspadaan.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-accent bg-opacity-20 flex items-center justify-center flex-shrink-0 text-accent font-bold text-xs">02</div>
+<div>
+<p class="text-white font-bold text-sm">Multi-Factor Authentication (MFA)</p>
+<p class="text-gray-500 text-xs">Mencegah akses meski password berhasil dicuri.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-accent bg-opacity-20 flex items-center justify-center flex-shrink-0 text-accent font-bold text-xs">03</div>
+<div>
+<p class="text-white font-bold text-sm">Verifikasi Out-of-Band</p>
+<p class="text-gray-500 text-xs">Konfirmasi permintaan sensitif melalui saluran komunikasi berbeda.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 08: HUMAN SECURITY</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
