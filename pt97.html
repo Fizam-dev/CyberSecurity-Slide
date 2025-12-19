@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Jenis Hacker Lainnya</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .hover-border-accent:hover { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Background Pattern */
+        .bg-circuit-pattern {
+            background-color: #000000;
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .domain-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .domain-card:hover {
+            transform: translateY(-4px);
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 4px 20px rgba(99, 109, 85, 0.3);
+            border-color: #636d55;
+        }
+        .domain-card:hover .icon-wrapper {
+            background-color: #636d55;
+            color: white;
+            border-color: #636d55;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-circuit-pattern">
+<!-- Header -->
+<div class="px-12 pt-10 pb-4 flex justify-between items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+<div>
+<p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Beyond The Hats</p>
+<h2 class="text-4xl font-header font-bold text-white uppercase tracking-tight">
+                    Jenis <span class="text-accent">Hacker Lainnya</span>
+</h2>
+</div>
+<div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+<i class="fas fa-users-cog"></i>
+<span>ACTOR TYPES MAP</span>
+</div>
+</div>
+<!-- Main Grid Content -->
+<div class="flex-1 px-12 py-12 relative z-10 overflow-hidden flex flex-col justify-center">
+<div class="grid grid-cols-4 gap-6">
+<!-- 1. Script Kiddie -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-terminal text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Script Kiddie</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Menggunakan tools/eksploit siap pakai milik orang lain, minim skill teknis.</p>
+</div>
+<!-- 2. Hacktivist -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-bullhorn text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Hacktivist</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Melakukan serangan demi motivasi ideologi, politik, atau pesan sosial.</p>
+</div>
+<!-- 3. State-Sponsored / APT -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-user-secret text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">State-Sponsored / APT</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Didukung negara, sumber daya besar, fokus pada spionase &amp; sabotase (Advanced Persistent Threat).</p>
+</div>
+<!-- 4. Insider Threat -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-id-badge text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Insider Threat</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Ancaman dari orang dalam (karyawan/mantan) dengan akses sah yang menyalahgunakan wewenang.</p>
+</div>
+<!-- 5. Cybercriminal Group -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-mask text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Cybercriminal Group</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Organisasi terstruktur dengan motif utama keuntungan finansial (Ransomware, Fraud).</p>
+</div>
+<!-- 6. Red Team -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-chess-rook text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Red Team</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Profesional yang mensimulasikan serangan ofensif nyata untuk menguji pertahanan organisasi.</p>
+</div>
+<!-- 7. Bug Bounty Hunter -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default hover-border-accent border-l-4 border-l-transparent">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-bug text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Bug Bounty Hunter</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Freelancer yang mencari celah keamanan secara legal demi imbalan uang (Bounty).</p>
+</div>
+<!-- 8. Security Researcher -->
+<div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center group cursor-default hover-border-accent border-l-4 border-l-transparent">
+<div class="icon-wrapper w-14 h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-4 transition-all duration-300">
+<i class="fas fa-microscope text-2xl"></i>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Researcher</h3>
+<p class="text-xs text-gray-400 leading-relaxed font-light">Akademisi atau ahli yang fokus menemukan kerentanan baru (Zero-day) untuk kemajuan ilmu.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 03: HACKER TYPES</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
