@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>SCADA / ICS Security</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Schematic Pattern Background */
+        .bg-schematic {
+            background-image: 
+                linear-gradient(rgba(20, 20, 20, 0.8) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 20, 20, 0.8) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .diagram-container {
+            position: relative;
+            background-color: #111;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .connection-line {
+            position: absolute;
+            background-color: #444;
+            z-index: 0;
+        }
+
+        .node {
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-schematic">
+<!-- Header -->
+<div class="px-12 pt-10 pb-4 flex justify-between items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+<div>
+<p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Industrial Control Systems</p>
+<h2 class="text-4xl font-header font-bold text-white uppercase tracking-tight">
+                    SCADA / <span class="text-accent">ICS Security</span>
+</h2>
+</div>
+<div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+<i class="fas fa-industry"></i>
+<span>OPERATIONAL TECHNOLOGY</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 py-8 flex gap-8 relative z-10">
+<!-- Left Column: Visual Diagram -->
+<div class="w-1/2 flex items-center justify-center p-4">
+<div class="diagram-container w-full h-full rounded-xl p-6 relative overflow-hidden flex flex-col justify-between">
+<!-- Background Grid for Diagram -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#636d55 1px, transparent 1px); background-size: 10px 10px;"></div>
+<!-- Purdue Model Simplified Visual -->
+<!-- Level 4: Enterprise -->
+<div class="node bg-gray-800 border-l-4 border-blue-500 p-3 rounded mb-4 relative">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-bold text-sm text-gray-200">Level 4: Enterprise Network</h4>
+<i class="fas fa-building text-blue-500"></i>
+</div>
+<p class="text-xs text-gray-400">ERP, Email, Business Ops</p>
+</div>
+<!-- DMZ Divider -->
+<div class="relative py-2 flex items-center justify-center">
+<div class="w-full h-px bg-red-900 dashed"></div>
+<span class="absolute bg-black px-2 text-xs text-red-500 font-mono border border-red-900 rounded">FIREWALL / DMZ</span>
+</div>
+<!-- Level 3: Operations -->
+<div class="node bg-gray-800 border-l-4 border-yellow-500 p-3 rounded mb-4 relative mt-2">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-bold text-sm text-gray-200">Level 3: Operations (SCADA)</h4>
+<i class="fas fa-desktop text-yellow-500"></i>
+</div>
+<p class="text-xs text-gray-400">HMI, Historian, Engineering Workstation</p>
+</div>
+<!-- Level 2: Control -->
+<div class="node bg-gray-800 border-l-4 border-orange-500 p-3 rounded mb-4 relative">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-bold text-sm text-gray-200">Level 2: Control Systems</h4>
+<i class="fas fa-microchip text-orange-500"></i>
+</div>
+<p class="text-xs text-gray-400">PLCs, RTUs, DCS Controllers</p>
+</div>
+<!-- Level 0-1: Field -->
+<div class="node bg-gray-800 border-l-4 border-accent p-3 rounded relative">
+<div class="flex justify-between items-center mb-1">
+<h4 class="font-bold text-sm text-gray-200">Level 0-1: Field Devices</h4>
+<i class="fas fa-cogs text-accent"></i>
+</div>
+<p class="text-xs text-gray-400">Sensors, Actuators, Motors, Valves</p>
+</div>
+<!-- Attack Path Overlay -->
+<div class="absolute right-4 top-10 bottom-10 w-1 bg-gradient-to-b from-red-600 to-transparent opacity-50"></div>
+<div class="absolute right-2 top-8 text-xs text-red-500 font-mono animate-pulse">ATTACK VECTOR</div>
+</div>
+</div>
+<!-- Right Column: Content Points -->
+<div class="w-1/2 flex flex-col justify-center space-y-6">
+<!-- Context Box -->
+<div class="bg-gray-900 bg-opacity-60 border-l-2 border-accent p-4 rounded-r">
+<h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+<i class="fas fa-info-circle text-accent"></i> Konteks Kritikal
+                    </h3>
+<p class="text-gray-300 text-sm leading-relaxed">
+                        Sistem SCADA mengelola infrastruktur vital seperti <span class="text-white font-semibold">pembangkit listrik, distribusi air, dan manufaktur</span>. Berbeda dengan IT, prioritas utama di sini adalah Keselamatan (Safety) dan Ketersediaan (Availability).
+                    </p>
+</div>
+<!-- Key Risks -->
+<div>
+<h4 class="text-accent font-mono text-sm uppercase mb-3 border-b border-gray-800 pb-1">Risiko Utama</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<i class="fas fa-exclamation-triangle text-red-500 mt-1 text-xs"></i>
+<p class="text-gray-300 text-sm"><strong class="text-white">Manipulasi Proses Fisik:</strong> Mengubah setpoint suhu/tekanan yang bisa menyebabkan ledakan atau kerusakan alat.</p>
+</li>
+<li class="flex items-start gap-3">
+<i class="fas fa-exclamation-triangle text-red-500 mt-1 text-xs"></i>
+<p class="text-gray-300 text-sm"><strong class="text-white">Ransomware pada OT:</strong> Menghentikan operasi produksi secara total (Downtime mahal).</p>
+</li>
+</ul>
+</div>
+<!-- Security Controls -->
+<div>
+<h4 class="text-accent font-mono text-sm uppercase mb-3 border-b border-gray-800 pb-1">Kontrol Keamanan (NIST SP 800-82)</h4>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-gray-900 p-3 rounded border border-gray-800">
+<div class="text-accent mb-1"><i class="fas fa-network-wired"></i></div>
+<p class="text-xs font-bold text-gray-200">Segmentasi Jaringan</p>
+<p class="text-[10px] text-gray-500">Pemisahan IT dan OT (Air Gap/DMZ)</p>
+</div>
+<div class="bg-gray-900 p-3 rounded border border-gray-800">
+<div class="text-accent mb-1"><i class="fas fa-list-check"></i></div>
+<p class="text-xs font-bold text-gray-200">Whitelisting Aplikasi</p>
+<p class="text-[10px] text-gray-500">Hanya izinkan program yang dikenal</p>
+</div>
+<div class="bg-gray-900 p-3 rounded border border-gray-800">
+<div class="text-accent mb-1"><i class="fas fa-eye"></i></div>
+<p class="text-xs font-bold text-gray-200">Monitoring Pasif</p>
+<p class="text-[10px] text-gray-500">Deteksi anomali protokol industri</p>
+</div>
+<div class="bg-gray-900 p-3 rounded border border-gray-800">
+<div class="text-accent mb-1"><i class="fas fa-key"></i></div>
+<p class="text-xs font-bold text-gray-200">Virtual Patching</p>
+<p class="text-[10px] text-gray-500">Proteksi kerentanan legacy system</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 02: SCADA / ICS</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
