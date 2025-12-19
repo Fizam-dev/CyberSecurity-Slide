@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>Network Security</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { margin: 0; padding: 0; background-color: #000000; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .slide-container { width: 1280px; height: 720px; position: relative; display: flex; flex-direction: column; background-color: #000000; color: white; overflow: hidden; }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Grid Pattern Background for Network Theme */
+        .bg-network-pattern {
+            background-color: #050505;
+            background-image: 
+                linear-gradient(rgba(99, 109, 85, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 109, 85, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .content-card {
+            background-color: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .icon-box {
+            box-shadow: 0 0 15px rgba(99, 109, 85, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-network-pattern">
+<!-- Decorative Network Lines -->
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Top Right Cluster -->
+<path d="M 1100 0 L 1100 150 L 1280 150" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="1100" cy="150" fill="#636d55" r="4"></circle>
+<!-- Bottom Left Cluster -->
+<path d="M 0 600 L 100 600 L 100 720" fill="none" stroke="#636d55" stroke-width="2"></path>
+<circle cx="100" cy="600" fill="#636d55" r="4"></circle>
+</svg>
+</div>
+<!-- Header -->
+<div class="px-12 pt-10 pb-4 flex justify-between items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+<div>
+<p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Infrastructure Protection</p>
+<h2 class="text-4xl font-header font-bold text-white uppercase tracking-tight">
+                Network <span class="text-accent">Security</span>
+</h2>
+</div>
+<div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+<i class="fas fa-network-wired"></i>
+<span>INFRASTRUCTURE &amp; PERIMETER</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 py-8 flex gap-12 relative z-10 items-center">
+<!-- Left Column: Controls & Hardening -->
+<div class="w-1/2 flex flex-col gap-5">
+<div class="mb-1">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-accent block"></span>
+                    Kontrol &amp; Hardening
+                </h3>
+<p class="text-gray-400 text-sm">Mekanisme pertahanan utama untuk melindungi integritas jaringan.</p>
+</div>
+<!-- Item 1 -->
+<div class="content-card p-4 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-project-diagram text-lg"></i>
+</div>
+<div>
+<h4 class="text-base font-bold text-gray-200 font-mono mb-1">Segmentasi Jaringan</h4>
+<p class="text-sm text-gray-400 leading-snug">Membagi jaringan menjadi zona-zona terisolasi (VLAN) untuk membatasi penyebaran serangan (lateral movement).</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="content-card p-4 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-shield-virus text-lg"></i>
+</div>
+<div>
+<h4 class="text-base font-bold text-gray-200 font-mono mb-1">Firewall &amp; IDS/IPS</h4>
+<p class="text-sm text-gray-400 leading-snug">Next-Gen Firewall untuk filtering trafik dan Intrusion Detection/Prevention Systems untuk mendeteksi pola serangan.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="content-card p-4 rounded-lg border border-gray-800 flex items-start gap-4">
+<div class="icon-box w-10 h-10 rounded bg-gray-900 border border-gray-700 flex items-center justify-center flex-shrink-0 text-accent">
+<i class="fas fa-lock text-lg"></i>
+</div>
+<div>
+<h4 class="text-base font-bold text-gray-200 font-mono mb-1">Zero Trust &amp; NAC</h4>
+<p class="text-sm text-gray-400 leading-snug">Network Access Control (NAC) dan prinsip "Never trust, always verify" untuk setiap koneksi.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Threats & Testing -->
+<div class="w-1/2 flex flex-col gap-6">
+<div class="mb-1">
+<h3 class="text-2xl font-header font-bold text-white mb-2 flex items-center gap-3">
+<span class="w-1 h-8 bg-gray-700 block"></span>
+                    Ancaman &amp; Pengujian
+                </h3>
+<p class="text-gray-400 text-sm">Jenis serangan umum dan cara memvalidasi keamanan.</p>
+</div>
+<!-- Threats Box -->
+<div class="bg-gray-900 bg-opacity-40 p-5 rounded-xl border border-dashed border-gray-700 relative mb-2">
+<div class="absolute -top-3 left-6 bg-black px-2 text-red-500 font-mono text-xs font-bold uppercase border border-red-900 rounded">Common Threats</div>
+<ul class="grid grid-cols-2 gap-3 mt-1">
+<li class="flex items-center gap-2">
+<i class="fas fa-exclamation-triangle text-gray-500 text-xs"></i>
+<p class="text-gray-300 text-sm font-semibold">DDoS Attacks</p>
+</li>
+<li class="flex items-center gap-2">
+<i class="fas fa-exclamation-triangle text-gray-500 text-xs"></i>
+<p class="text-gray-300 text-sm font-semibold">MITM (Man-in-the-Middle)</p>
+</li>
+<li class="flex items-center gap-2">
+<i class="fas fa-exclamation-triangle text-gray-500 text-xs"></i>
+<p class="text-gray-300 text-sm font-semibold">IP Spoofing</p>
+</li>
+<li class="flex items-center gap-2">
+<i class="fas fa-exclamation-triangle text-gray-500 text-xs"></i>
+<p class="text-gray-300 text-sm font-semibold">Packet Sniffing</p>
+</li>
+</ul>
+</div>
+<!-- Testing Method Box -->
+<div class="content-card p-5 rounded-xl border-l-4 border-accent relative overflow-hidden">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<i class="fas fa-vial text-6xl text-white"></i>
+</div>
+<h4 class="text-lg font-bold text-white mb-3 font-mono">Metode Pengujian (Testing)</h4>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<div class="bg-gray-800 p-1 rounded text-accent"><i class="fas fa-search"></i></div>
+<div>
+<p class="text-gray-200 text-sm font-bold">Vulnerability Scanning</p>
+<p class="text-gray-500 text-xs">Pemindaian otomatis port dan layanan (Nmap, Nessus).</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-gray-800 p-1 rounded text-accent"><i class="fas fa-user-secret"></i></div>
+<div>
+<p class="text-gray-200 text-sm font-bold">Penetration Testing</p>
+<p class="text-gray-500 text-xs">Simulasi serangan etis untuk mengeksploitasi celah.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-12 py-6 border-t border-gray-900 flex justify-between items-center bg-black relative z-20">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<p class="text-xs font-mono text-gray-600">SECTION 03: NETWORK DEFENSE</p>
+</div>
+<p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+</div>
+</div>
+</body>
+</html>
